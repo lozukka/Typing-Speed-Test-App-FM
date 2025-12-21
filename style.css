@@ -50,3 +50,10 @@
     color: var(--neutral0);
   }
 }
+
+.attribution {
+  visibility: hidden;
+}
+#results {
+  visibility: hidden;
+}
