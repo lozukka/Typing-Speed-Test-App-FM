@@ -77,10 +77,37 @@
     color: var(--neutral0) !important;
   }
 }
-
-.attribution {
-  visibility: hidden;
+@layer main {
+  main {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+  }
+  #begin {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+  }
+  #top {
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+    flex-direction: column;
+  }
+  #statistics {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #difficulty,
+  #mode {
+    display: flex;
+  }
 }
-#results {
+.attribution {
   visibility: hidden;
 }
