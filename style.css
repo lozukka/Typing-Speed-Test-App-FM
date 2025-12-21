@@ -34,6 +34,7 @@
   :root {
     --neutral900: hsl(0, 0%, 7%);
     --neutral800: hsl(0, 0%, 15%);
+    --neutral700: hsl(0, 0%, 23%);
     --neutral500: hsl(240, 3%, 46%);
     --neutral400: hsl(240, 1%, 59%);
     --neutral0: hsl(0, 0%, 100%);
@@ -77,12 +78,11 @@
     color: var(--neutral0) !important;
   }
 }
-@layer main {
+@layer main-begin {
   main {
     padding: 1rem;
     width: 100%;
     display: flex;
-    border: 1px solid red;
   }
   #begin {
     display: flex;
@@ -90,11 +90,10 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
   }
   #top {
     display: flex;
-    border: 1px solid red;
+
     width: 100%;
     flex-direction: column;
   }
@@ -102,10 +101,31 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .statistics p {
+    color: var(--neutral400);
+    letter-spacing: -0.48px;
+    padding-bottom: 8px;
+  }
+  .statistics span {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  #settings {
+    padding-bottom: 1rem;
   }
   #difficulty,
   #mode {
     display: flex;
+  }
+  hr {
+    color: var(--neutral700);
   }
 }
 .attribution {
