@@ -128,6 +128,14 @@
     color: var(--neutral700);
   }
 }
+@layer main-bottom {
+  #bottom {
+    padding: 1rem 0;
+  }
+  #text p {
+    font-size: 2rem;
+  }
+}
 .attribution {
   visibility: hidden;
 }
