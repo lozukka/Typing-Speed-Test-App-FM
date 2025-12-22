@@ -60,7 +60,7 @@
     display: block;
   }
   .hidden {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -176,9 +176,25 @@
 @layer main-bottom {
   #text {
     padding: 1rem;
+    width: 100%;
   }
   #text p {
     font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  #text button {
+    background: var(--neutral800);
+    border: none;
+    color: var(--neutral0);
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  #text button:hover {
+    background: var(--neutral500);
   }
 }
 @layer start-area {
