@@ -151,10 +151,23 @@
       gap: 1rem;
     }
   }
+  #settings button {
+    background: var(--neutral900);
+    border: 1px solid var(--neutral500);
+    color: var(--neutral0);
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    padding: 6px 10px;
+  }
+  #settings button:hover {
+    border: 1px solid var(--blue400);
+    color: var(--blue400);
+  }
   #difficulty,
   #mode {
     display: flex;
     gap: 1rem;
+    color: var(--neutral400);
   }
   hr {
     color: var(--neutral700);
