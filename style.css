@@ -50,6 +50,12 @@
     background: var(--neutral900);
     color: var(--neutral0);
   }
+  @media (min-width: 1200px) {
+    body {
+      width: 1200px;
+      margin: auto;
+    }
+  }
   .show {
     display: block;
   }
@@ -102,10 +108,24 @@
     justify-content: space-between;
     padding: 0 1rem 1rem 1rem;
   }
+  @media (min-width: 700px) {
+    #statistics {
+      justify-content: flex-start;
+      gap: 1rem;
+      padding: 0;
+      padding-bottom: 1rem;
+    }
+  }
   .statistics {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  @media (min-width: 700px) {
+    .statistics {
+      flex-direction: row;
+      gap: 1rem;
+    }
   }
   .statistics p {
     color: var(--neutral400);
@@ -116,12 +136,24 @@
     font-size: 2rem;
     font-weight: 700;
   }
+  @media (min-width: 700px) {
+    .statistics p {
+      padding-bottom: 0;
+    }
+  }
   #settings {
     padding-bottom: 1rem;
+  }
+  @media (min-width: 700px) {
+    #settings {
+      display: flex;
+      gap: 1rem;
+    }
   }
   #difficulty,
   #mode {
     display: flex;
+    gap: 1rem;
   }
   hr {
     color: var(--neutral700);
