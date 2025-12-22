@@ -136,6 +136,45 @@
     font-size: 2rem;
   }
 }
+@layer start-area {
+  #start-button {
+    backdrop-filter: blur(7px);
+    background-color: rgba(18, 18, 18, 0.4);
+    position: fixed;
+    width: 343px;
+    height: 50%;
+    top: 250px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  #start-button button {
+    background-color: var(--blue600);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    color: var(--neutral0);
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+    font-family: "Sora", Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  #start-button button:hover {
+    background-color: var(--blue400);
+  }
+  #start-button p {
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+  }
+}
 .attribution {
   visibility: hidden;
 }
