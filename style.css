@@ -196,6 +196,10 @@
   #text button:hover {
     background: var(--neutral500);
   }
+  #userInput {
+    width: 100%;
+    resize: none;
+  }
 }
 @layer start-area {
   #start-button {

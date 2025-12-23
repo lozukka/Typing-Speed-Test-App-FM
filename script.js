@@ -27,6 +27,7 @@ function startTest() {
   startButton.classList.add("hidden");
   clearInterval(timerInterval);
   timerInterval = setInterval(countdown, 1000);
+  insertText();
 }
 function stopTest() {
   clearInterval(timerInterval);
@@ -59,4 +60,8 @@ function handleWord(text) {
 }
 function renderText(wordCount) {
   wpmElement.innerHTML = wordCount;
+}
+//insert text for the test
+function insertText() {
+  userInput.value = "Hello there!";
 }
