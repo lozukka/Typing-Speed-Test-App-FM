@@ -8,6 +8,7 @@ var timerIdElement = document.getElementById("statistics-time");
 var wpmElement = document.getElementById("statistics-wpm");
 let timerInterval;
 
+//media query for the logo
 function updateLogo(e) {
   const isTablet = e.matches;
   if (isTablet) {
@@ -21,7 +22,7 @@ function updateLogo(e) {
   }
 }
 updateLogo(media);
-
+//start and restart buttons
 function startTest() {
   startButton.classList.add("hidden");
   clearInterval(timerInterval);
@@ -29,8 +30,9 @@ function startTest() {
 }
 function stopTest() {
   clearInterval(timerInterval);
+  userInput.value = "";
 }
-
+//timer
 function countdown() {
   if (timeLeft == -1) {
     clearTimeout(timerInterval);
@@ -39,7 +41,7 @@ function countdown() {
     timeLeft--;
   }
 }
-
+//wordcount
 userInput.addEventListener("input", (e) => {
   const text = e.target.value.trim();
   renderText(handleWord(text));
