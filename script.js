@@ -2,8 +2,10 @@ const media = window.matchMedia("(width > 700px)");
 const logoTablet = document.getElementById("logo-tablet-desktop");
 const logoMobile = document.getElementById("logo-mobile");
 const startButton = document.getElementById("start-button");
+const userInput = document.getElementById("userInput");
 var timeLeft = 60;
 var timerIdElement = document.getElementById("statistics-time");
+var wpmElement = document.getElementById("statistics-wpm");
 let timerInterval;
 
 function updateLogo(e) {
@@ -18,6 +20,7 @@ function updateLogo(e) {
     console.log("is mobile");
   }
 }
+updateLogo(media);
 
 function startTest() {
   startButton.classList.add("hidden");
@@ -36,4 +39,22 @@ function countdown() {
     timeLeft--;
   }
 }
-updateLogo(media);
+
+userInput.addEventListener("input", (e) => {
+  const text = e.target.value.trim();
+  renderText(handleWord(text));
+});
+
+function handleWord(text) {
+  const textArr = text.split(" ");
+  let wordCount = 0;
+  for (word of textArr) {
+    if (/[a-zA-Z0-9]/.test(word)) {
+      wordCount++;
+    }
+  }
+  return wordCount;
+}
+function renderText(wordCount) {
+  wpmElement.innerHTML = wordCount;
+}
