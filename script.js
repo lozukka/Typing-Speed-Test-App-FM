@@ -14,7 +14,8 @@ let timerInterval;
 //choose text for the test
 async function chooseText() {
   chosenTestTextData = await getText();
-  renderTestText(chooseTestText(chosenTestTextData));
+  chosenTestText = chooseTestText(chosenTestTextData);
+  renderTestText(chosenTestText);
 }
 async function getText() {
   try {

@@ -174,15 +174,15 @@
   }
 }
 @layer main-bottom {
-  #text {
+  #test-area {
     padding: 1rem;
     width: 100%;
   }
-  #text p {
+  #test-area p {
     font-size: 2rem;
     padding-bottom: 2rem;
   }
-  #text button {
+  #test-area button {
     background: var(--neutral800);
     border: none;
     color: var(--neutral0);
@@ -193,7 +193,7 @@
     font-weight: 600;
     margin-top: 1rem;
   }
-  #text button:hover {
+  #test-area button:hover {
     background: var(--neutral500);
   }
   #userInput {
