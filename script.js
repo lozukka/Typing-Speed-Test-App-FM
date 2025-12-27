@@ -67,6 +67,7 @@ function stopTest() {
 function countdown() {
   if (timeLeft == -1) {
     clearTimeout(timerInterval);
+    //game-over things
   } else {
     timerIdElement.innerHTML = "0:" + timeLeft;
     timeLeft--;
