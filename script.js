@@ -6,7 +6,37 @@ const userInput = document.getElementById("userInput");
 var timeLeft = 60;
 var timerIdElement = document.getElementById("statistics-time");
 var wpmElement = document.getElementById("statistics-wpm");
+const testText = document.getElementById("text");
+let chosenTestTextData;
+let chosenTestText;
 let timerInterval;
+
+//choose text for the test
+async function chooseText() {
+  chosenTestTextData = await getText();
+  renderTestText(chooseTestText(chosenTestTextData));
+}
+async function getText() {
+  try {
+    const response = await fetch("./data.json");
+    if (!response.ok) throw new Error("Failed to load text for the test.");
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+function chooseTestText(chosenTestTextData) {
+  return chosenTestTextData.easy[0].text;
+}
+
+function renderTestText(chosenTestText) {
+  const textElement = document.createElement("p");
+  textElement.innerHTML = chosenTestText;
+  testText.appendChild(textElement);
+}
+window.addEventListener("load", chooseText);
 
 //media query for the logo
 function updateLogo(e) {
@@ -27,7 +57,6 @@ function startTest() {
   startButton.classList.add("hidden");
   clearInterval(timerInterval);
   timerInterval = setInterval(countdown, 1000);
-  insertText();
 }
 function stopTest() {
   clearInterval(timerInterval);
@@ -60,8 +89,4 @@ function handleWord(text) {
 }
 function renderText(wordCount) {
   wpmElement.innerHTML = wordCount;
-}
-//insert text for the test
-function insertText() {
-  userInput.value = "Hello there!";
 }
